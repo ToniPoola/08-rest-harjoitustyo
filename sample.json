@@ -1,0 +1,6 @@
+{
+	"tool_name": "Jyrsin 10mm",     
+	"material": "S355",             
+	"cutting_speed": 100,           
+	"feed_rate": 0.25             
+}
