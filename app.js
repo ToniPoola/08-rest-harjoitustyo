@@ -25,20 +25,20 @@ app.use((req, res, next) => {
 }); // GET /api/materials
 
 //CREATE
-app.post("/api/machining-parameter-set", machining_controller.api_post_machining_parameter_set); //machining
+app.post("/api/machining-parameter-set", machining_controller.api_post_parameter); //machining
 
-// READ
-app.get("/api/machining-parameter-sets", machining_controller.api_get_machining_parameter_sets);
+// READ ALL
+app.get("/api/machining-parameter-sets", machining_controller.api_get_parameters);
 // READ by id
-app.get("/api/machining-parameter-set/:id", machining_controller.api_get_machining_parameter_set)
+app.get("/api/machining-parameter-set/:id", machining_controller.api_get_parameter);
 
 // UPDATE
 //app.patch korvaa vain tietyt kentät
 //app.put korvaa koko tiedon
-app.put("/api/machining-parameter-set/:id", machining_controller.api_put_machining_parameter_set);
+app.put("/api/machining-parameter-set/:id", machining_controller.api_put_parameter);
 
 // DELETE
-app.delete("/api/machining-parameter-set/:id", machining_controller.api_delete_machining_parameter_set);
+app.delete("/api/machining-parameter-set/:id", machining_controller.api_delete_parameter);
 
 //polku clusteriin
 const database_uri = "mongodb+srv://server:LckmK9T1HrTr1gbb@cluster0-2t6ml.mongodb.net/test?retryWrites=true&w=majority";
